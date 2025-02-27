@@ -17,15 +17,25 @@ import DefaultLayout from "./layout/DefaultLayout";
 
 function App() {
 
+  // useSTat per gestire i Data
   const [films, setFilms] = useState([]);
+
+  // variabile per salvare l'API
+  const api = "78b08f89c5f899c994084e5ca136fe68";
+
 
 
   //funzione di gestione chiamate API
-  function fetchFilms() {
-    axios.get("https://api.themoviedb.org/3/search/movie?api_key=78b08f89c5f899c994084e5ca136fe68&query=disney")
+  function fetchFilms(query) {
+    axios.get("https://api.themoviedb.org/3/search/movie", {
+      params: {
+        api_key: api,
+        query: query
+      }
+    })
       .then((res) => {
         setFilms(res.data.results);
-        console.log(res.data.results);
+        // console.log(res.data.results);
 
       })
 
@@ -39,7 +49,7 @@ function App() {
 
   return (
     <>
-      <GlobalContexts.Provider value={{ films }}>
+      <GlobalContexts.Provider value={{ films, fetchFilms }}>
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />} >
