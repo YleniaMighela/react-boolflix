@@ -1,0 +1,1 @@
+// qui genero a lista delle card
