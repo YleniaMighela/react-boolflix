@@ -15,37 +15,29 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-  const [film, setFilm] = useState([]);
+  const [films, setFilms] = useState([]);
 
 
   //funzione di gestione chiamate API
-  function fetchFilm() {
+  function fetchFilms() {
     axios.get("https://api.themoviedb.org/3/search/movie?api_key=78b08f89c5f899c994084e5ca136fe68&query=disney")
       .then((res) => {
-        setFilm(res.data.results);
-        // console.log(res.data.results);
+        setFilms(res.data.results);
+        console.log(res.data.results);
 
       })
 
       .catch(err => console.log(err));
   }
 
-  useEffect(fetchFilm, []);
-
-
-
-
-
-
-
-
+  useEffect(() => fetchFilms(), []);
 
 
 
 
   return (
     <>
-      <GlobalContexts.Provider value={{ film }}>
+      <GlobalContexts.Provider value={{ films }}>
 
         <Header />
         <Main />
