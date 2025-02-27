@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+/* CONTENUTO HEADER */
+
+header {
+    background-color: rgb(173, 210, 240);
+    height: 80px;
+}
+
+
+form {
+    display: flex;
+    justify-content: end;
+}
+
+/* CONTENUTO MAIN */
+
+main {
+    background-color: rgb(198, 218, 205);
+    height: 80px;
+}
