@@ -1,17 +1,19 @@
+// importo la chiamata axios
+import axios from "axios";
+// importo react-router
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// importo lo useState e UseEffect
+import { useState, useEffect } from 'react';
+
+
 // importo i componenti
-import Header from "./components/header/Header";
-import Main from "./components/main/Main";
+import MainPage from "./pages/MainPage";
 
 // importo il global context
 import GlobalContexts from "./contexts/GlobalContexts";
 
-// importo la chiamata axios
-import axios from "axios";
 
-
-// importo lo useState e UseEffect
-import { useState, useEffect } from 'react';
-
+import DefaultLayout from "./layout/DefaultLayout";
 
 function App() {
 
@@ -38,10 +40,13 @@ function App() {
   return (
     <>
       <GlobalContexts.Provider value={{ films }}>
-
-        <Header />
-        <Main />
-
+        <BrowserRouter>
+          <Routes>
+            <Route element={<DefaultLayout />} >
+              <Route path="/" element={<MainPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </GlobalContexts.Provider>
     </>
   )

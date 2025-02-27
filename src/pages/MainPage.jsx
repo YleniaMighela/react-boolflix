@@ -1,11 +1,11 @@
-import FilmList from "../main/FilmList";
+import FilmList from "../components/main/FilmList";
 
 export default function Main() {
 
 
     return (
         <main>
-            <h1>Qui ci sarà il compenente che conterrà il listato</h1>
+            <h1>trova il tuo film</h1>
             <FilmList />
 
 
