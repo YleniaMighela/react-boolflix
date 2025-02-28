@@ -16,14 +16,16 @@ export default function FilmList() {
 
     return (
         <>
-            {
-                films.map((film) => (
+            <div className="container" >
+                {
+                    films.map((film) => (
 
-                    <Filmcard key={film.id} film={film} />
+                        <Filmcard key={film.id} film={film} />
 
 
-                ))
-            }
+                    ))
+                }
+            </div>
         </>
 
 

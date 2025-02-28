@@ -16,6 +16,7 @@ header {
 form {
     display: flex;
     justify-content: end;
+
 }
 
 /* CONTENUTO MAIN */
@@ -25,18 +26,22 @@ form {
 .container {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    flex-wrap: wrap;
+
+
 
 }
 
 img {
-    width: 100%;
+    padding: 20px;
+
 }
 
 
 
 .postitem {
-    width: 70%;
+
     margin: 20px;
     border: 2px solid black;
+
 }
