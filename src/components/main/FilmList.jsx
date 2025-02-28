@@ -9,21 +9,31 @@ import Filmcard from "./FilmCard";
 
 export default function FilmList() {
 
-    const { films } = useContext(GlobalContexts);
-
+    const { films, series } = useContext(GlobalContexts);
 
 
 
     return (
         <>
+            {/* film */}
+
             <div className="container" >
-                {
-                    films.map((film) => (
+                {films.map((film) => (
 
-                        <Filmcard key={film.id} film={film} />
+                    <Filmcard key={film.id} film={film} />
+                ))
+                }
+            </div>
 
 
-                    ))
+
+            {/* serie tv */}
+
+            <div className="container" >
+                {series.map((serie) => (
+
+                    <Filmcard key={serie.id} serie={serie} />
+                ))
                 }
             </div>
         </>

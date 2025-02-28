@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import GlobalContexts from "../../../contexts/GlobalContexts"
 
 
-// mi creo una variabile di stato(oggetto) in cui si andranno a mappare le proprietà selezionate assegnandogli un valore iniziale
+// mi creo una variabile di stato (oggetto) in cui si andranno a mappare le proprietà selezionate assegnandogli un valore iniziale
 const initialFormData = { cerca: " " };
 
 export default function Form() {
@@ -13,6 +13,8 @@ export default function Form() {
     // utilizzo lo useState per la gestione delle informazioni raccolte dai campi del form
     const [formData, setFormData] = useState(initialFormData);
 
+
+    // questa costante richiama la funzione che fa partire la chiamata per i film
     const { fetchFilms } = useContext(GlobalContexts);
 
     // funzione che andrà a gestire le informazioni dei campi
