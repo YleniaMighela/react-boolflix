@@ -33,46 +33,46 @@ button {
 }
 
 /* CONTENUTO MAIN */
-
+/* sezione home page */
 .container_main {
-    height: 1000px;
-    background-image: url(../netflix.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    background-color: rgba(247, 239, 239, 0.712);
+    position: relative;
 }
 
 #titleMain {
     width: 50%;
     font-size: 45px;
     font-weight: 100px;
+    margin: 10px;
     color: rgb(238, 227, 227);
     background-color: rgba(0, 0, 0, 0.377);
-
+    position: absolute;
+    left: 25%;
 
 
 }
 
+/* sezione card */
 .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
-
-
+    gap: 10px;
+    width: 100%;
 }
 
 img {
-
     padding: 20px;
-
 }
 
 
 
 .postitem {
-    background-color: aliceblue;
-    margin: 20px;
+    text-align: center;
+    width: 30%;
+    font-size: small;
+    background-color: rgba(32, 53, 75, 0.623);
+    margin-top: 70px;
     border: 2px solid black;
 
 }
