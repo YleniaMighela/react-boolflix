@@ -24,15 +24,16 @@ form {
 
 
 .container {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 
 
 
 }
 
 img {
+
     padding: 20px;
 
 }
