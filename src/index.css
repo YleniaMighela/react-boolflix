@@ -29,8 +29,14 @@ form {
 
 }
 
-.postitem {
+img {
     width: 100%;
+}
 
+
+
+.postitem {
+    width: 70%;
+    margin: 20px;
     border: 2px solid black;
 }
