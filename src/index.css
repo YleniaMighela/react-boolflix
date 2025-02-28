@@ -34,7 +34,26 @@ button {
 
 /* CONTENUTO MAIN */
 
+.container_main {
+    height: 1000px;
+    background-image: url(../netflix.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
+#titleMain {
+    width: 50%;
+    font-size: 45px;
+    font-weight: 100px;
+    color: rgb(238, 227, 227);
+    background-color: rgba(0, 0, 0, 0.377);
+    position: absolute;
+    left: 25%;
+    top: 30%;
+
+
+}
 
 .container {
     display: flex;

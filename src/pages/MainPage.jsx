@@ -5,8 +5,11 @@ export default function Main() {
 
     return (
         <main>
-            <h1>trova il tuo film</h1>
-            <FilmList />
+            <div className="container_main">
+                <h1 id="titleMain">Scegli tra i tuoi film, le tue serie Tv preferite....</h1>
+                <FilmList />
+            </div>
+
 
 
         </main>
