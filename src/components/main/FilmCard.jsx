@@ -16,8 +16,8 @@ export default function FilmCard(props) {
 
                 <h2>Titolo {film.title}</h2>
                 <h3> Titolo originale {film.original_title} </h3>
-                <span> Lingua {film.original_language}</span>
-                <img src="../../../flags/it.png" alt="" />
+                {/* <span> Lingua {}</span> */}
+                <img src={`../../../flags/${film.original_language}.png`} alt="{film.original_language}" />
                 <br />
                 <span> Voto {film.vote_average}</span>
 
