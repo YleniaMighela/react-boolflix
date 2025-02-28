@@ -6,7 +6,7 @@ export default function FilmCard({ film, serie }) {
 
     // mi salvo in una costante il path del percorso della bandiera non corrispondente alla lingua
 
-    const errFlag = "../../../flags/rainbow.png"
+    const errFlag = "../../../flags/ee.png"
 
 
 
