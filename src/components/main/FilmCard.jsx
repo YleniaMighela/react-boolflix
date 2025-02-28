@@ -1,8 +1,61 @@
+// importo il fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+
 // qui genero a lista delle card
 
 export default function FilmCard({ film, serie }) {
 
     // console.log(film, serie);
+
+
+
+    // creo una funzione che ci premette di convertire le stelle attraverso il math(che arrotonda x eccesso)
+    const converStars = (voto) => {
+
+        //inizializzo una varibiale con valore array vuoto in cui il ciclo andrà a pushare la condizione in cui se l'indice è inferiore a 5 (stelle piene) viene aggiunta all'array una stella gialla, altrimenti viene aggiunta una stella grigia
+        let stars = [];
+
+
+        const points = Math.ceil(voto / 2);
+
+
+        for (let i = 0; i < 5; i++) {
+            if (i < points) {
+                stars.push(
+                    <FontAwesomeIcon
+                        key={i}
+                        icon={faStar}
+                        style={{ color: "#FFD43B" }}
+                    />
+                );
+            } else {
+                stars.push(
+                    <FontAwesomeIcon
+                        key={i}
+                        icon={faStar}
+                        style={{ color: "#e6e6e6" }}
+                    />
+                );
+            }
+        }
+
+        return stars;
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     // mi salvo in una costante il path del percorso della bandiera non corrispondente alla lingua
@@ -42,7 +95,8 @@ export default function FilmCard({ film, serie }) {
 
                     <br />
 
-                    <span> Voto {film.vote_average}</span>
+                    <span> Voto : {converStars(film.vote_average)}</span>
+
 
                 </div>
             )}
@@ -63,7 +117,7 @@ export default function FilmCard({ film, serie }) {
 
                     <br />
 
-                    <span> Voto {serie.vote_average}</span>
+                    <span> Voto : {converStars(serie.vote_average)}</span>
 
                 </div>)}
 
