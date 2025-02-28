@@ -76,3 +76,14 @@ img {
     border: 2px solid black;
 
 }
+
+
+
+.postitem:hover .postText {
+    display: block;
+}
+
+
+.postitem:hover img {
+    display: none;
+}

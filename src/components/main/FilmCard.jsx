@@ -84,20 +84,22 @@ export default function FilmCard({ film, serie }) {
                 <div className="postitem" key={film.id}>
                     <h1>Sezione FILM</h1>
 
-                    <h2>Titolo {film.title}</h2>
+                    <div className='postText'>
+                        <h2>Titolo {film.title}</h2>
 
-                    <img src={`https://image.tmdb.org/t/p/w342${film.poster_path}`} alt={film.title} />
-
-
-                    <h3> Titolo originale {film.original_title} </h3>
-
-                    <img src={`../../../flags/${film.original_language}.png`} alt={film.original_language} onError={(e) => e.target.src = errFlag} />
-
-                    <br />
-
-                    <span> Voto : {converStars(film.vote_average)}</span>
+                        <img src={`https://image.tmdb.org/t/p/w342${film.poster_path}`} alt={film.title} />
 
 
+                        <h3> Titolo originale {film.original_title} </h3>
+
+                        <img src={`../../../flags/${film.original_language}.png`} alt={film.original_language} onError={(e) => e.target.src = errFlag} />
+
+                        <br />
+
+                        <span> Voto : {converStars(film.vote_average)}</span>
+
+                        <h3>Overview: {film.overview}</h3>
+                    </div>
                 </div>
             )}
 
@@ -106,19 +108,22 @@ export default function FilmCard({ film, serie }) {
                 <div className="postitem" key={serie.id}>
                     <h1>Sezione SERIETV</h1>
 
-                    <h2>Titolo {serie.name}</h2>
+                    <div className='postText'>
+                        <h2>Titolo {serie.name}</h2>
 
-                    <img src={`https://image.tmdb.org/t/p/w342/${serie.poster_path}`} alt={serie.name} />
+                        <img src={`https://image.tmdb.org/t/p/w342/${serie.poster_path}`} alt={serie.name} />
 
 
-                    <h3> Titolo originale {serie.original_name} </h3>
+                        <h3> Titolo originale {serie.original_name} </h3>
 
-                    <img src={`../../../flags/${serie.original_language}.png`} alt={serie.original_language} onError={(e) => e.target.src = errFlag} />
+                        <img src={`../../../flags/${serie.original_language}.png`} alt={serie.original_language} onError={(e) => e.target.src = errFlag} />
 
-                    <br />
+                        <br />
 
-                    <span> Voto : {converStars(serie.vote_average)}</span>
+                        <span> Voto : {converStars(serie.vote_average)}</span>
 
+                        <h3>Overview: {serie.overview}</h3>
+                    </div>
                 </div>)}
 
         </>
