@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <header>
 
-            <h1> BOOLFLIX</h1>
+            <h1 id="titleLogo"> BOOLFLIX</h1>
 
             <div>
                 <Form />

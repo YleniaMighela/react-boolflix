@@ -42,7 +42,7 @@ export default function Form() {
                     name="cerca"
                     onChange={handleFormData}
                     value={formData.cerca}
-                    placeholder='Cerca il tuo film'
+                    placeholder='Trova il tuo film'
                 />
 
                 <button> Cerca </button>
