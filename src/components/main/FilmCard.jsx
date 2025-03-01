@@ -98,7 +98,7 @@ export default function FilmCard({ film, serie }) {
 
                         <span> Voto : {converStars(film.vote_average)}</span>
 
-                        <h3>Overview: {film.overview}</h3>
+                        <p className='overflowText'><em>Overview: {film.overview}</em></p>
                     </div>
                 </div>
             )}
@@ -122,7 +122,7 @@ export default function FilmCard({ film, serie }) {
 
                         <span> Voto : {converStars(serie.vote_average)}</span>
 
-                        <h3>Overview: {serie.overview}</h3>
+                        <p className='overflowText'> <em>Overview: {serie.overview}</em></p>
                     </div>
                 </div>)}
 
